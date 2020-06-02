@@ -5,6 +5,7 @@ import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
 import Dayjs from "vue-dayjs";
 import VueScrollTo from "vue-scrollto";
 import VueSweetAlert2 from "vue-sweetalert2";
+import VueCountdown from "@chenfengyuan/vue-countdown";
 
 import "./scss/styles.scss";
 import "sweetalert2/dist/sweetalert2.min.css";
@@ -19,6 +20,7 @@ Vue.use(Dayjs);
 Vue.use(VueAxios, axios);
 Vue.use(VueScrollTo, ScrollToConfig);
 Vue.use(VueSweetAlert2, SweetAlert2Config);
+Vue.component(VueCountdown.name, VueCountdown);
 
 Vue.config.productionTip = false;
 

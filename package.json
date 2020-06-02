@@ -9,6 +9,7 @@
     "heroku-prebuild": "scripts/build-prod.sh"
   },
   "dependencies": {
+    "@chenfengyuan/vue-countdown": "^1.1.5",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
