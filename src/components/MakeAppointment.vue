@@ -123,10 +123,15 @@ export default {
     },
     date: function(val) {
       this.time =
-        this.time !== null ? this.time : this.$dayjs().format("HH:mm:ss");
-      this.form.datetime = this.$dayjs(`${val} ${this.time}`).format(
-        "MM/DD/YY HH:mm:ss"
-      );
+        val === null
+          ? null
+          : this.time !== null
+          ? this.time
+          : this.$dayjs().format("HH:mm:ss");
+      this.form.datetime =
+        val === null
+          ? null
+          : this.$dayjs(`${val} ${this.time}`).format("MM/DD/YY HH:mm:ss");
     },
     time: function(val) {
       this.form.datetime = this.$dayjs(
@@ -149,6 +154,11 @@ export default {
       const dateTime = this.$dayjs(`${this.date} ${this.time}`).format(
         "MM/DD/YY HH:mm:ss"
       );
+
+      if (!this.$dayjs(`${this.date}`).isValid()) {
+        return null;
+      }
+
       return dateTime;
     }
   },
@@ -159,19 +169,22 @@ export default {
       this.isSubmitting = true;
 
       this.axios
-        .post("./api/input.php", qs.stringify(this.form))
+        .post("./api/input", qs.stringify(this.form))
         .then(response => {
           const result = response.data;
           this.$swal(`${result.meesages}`);
+          return result;
         })
-        .then(() => {
-          this.date = null;
-          this.time = null;
-          this.form = {
-            datetime: null,
-            state: null,
-            branch: null
-          };
+        .then(result => {
+          if (result.status === 1) {
+            this.date = null;
+            this.time = null;
+            this.form = {
+              datetime: null,
+              state: null,
+              branch: null
+            };
+          }
           this.isSubmitting = false;
         });
     }

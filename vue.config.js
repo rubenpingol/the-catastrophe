@@ -3,7 +3,7 @@ module.exports = {
   devServer: {
     proxy: {
       "^/api/": {
-        target: "http://catastrophe.local",
+        target: "https://warm-ravine-50741.herokuapp.com",
         changeOrigin: true // so CORS doesn't bit us.
       }
     }
