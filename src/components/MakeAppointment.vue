@@ -84,6 +84,8 @@
 
 <script>
 import qs from "querystring";
+import { ENV, API_PATH } from "../constants";
+
 export default {
   data() {
     return {
@@ -169,7 +171,10 @@ export default {
       this.isSubmitting = true;
 
       this.axios
-        .post("/api/input", qs.stringify(this.form))
+        .post(
+          ENV === "production" ? API_PATH : "/api/input",
+          qs.stringify(this.form)
+        )
         .then(response => {
           const result = response.data;
           this.$swal(`${result.meesages}`);
