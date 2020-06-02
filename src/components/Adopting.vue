@@ -6,8 +6,8 @@
           <h1 class="text-white">Adopting 101</h1>
           <p class="lead">
             <strong>Class is in session!</strong> Here's a basic guide of what
-            you would probably want to have<br />
-            along with you at our adoption center.
+            you would probably want to have along with you at our adoption
+            center.
           </p>
           <b-list-group class="adopting__list-group">
             <b-list-group-item>
