@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { COUNTDOWN_TIMER_VALUE } from "../constants";
+
 export default {
   data() {
     return {
@@ -28,7 +30,7 @@ export default {
   mounted() {
     // days * hours * minutes * seconds * milliseconds
     // from right to left
-    this.countdownTime = 2 * 60 * 1000; // <-
+    this.countdownTime = COUNTDOWN_TIMER_VALUE; // <-
   },
   methods: {
     transform(props) {
