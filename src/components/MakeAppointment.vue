@@ -172,7 +172,7 @@ export default {
 
       this.axios
         .post(
-          ENV === "production" ? API_PATH : "/api/input",
+          ENV === "production" ? `${API_PATH}/api/input` : "/api/input",
           qs.stringify(this.form)
         )
         .then(response => {
