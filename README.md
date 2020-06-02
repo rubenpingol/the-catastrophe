@@ -1,4 +1,4 @@
-# the-catastrophe
+# The Catastrophe
 
 ## Project setup
 ```
