@@ -1,0 +1,50 @@
+.adopting {
+    padding-top: 5rem;
+    padding-bottom: 12rem;
+    background: rgba(var(--color-background-indigo-dark), 1)
+        url('../assets/bg_adopting101.jpg')
+        top/100% no-repeat;
+    background-position: left 0;
+
+    .text-color {
+        color: rgba(var(--color-background-blue-lighter), 1);
+    }
+
+    .lead {
+        @extend .text-color;
+        & > strong {
+            font-family: Poppins-SemiBold;
+        }
+    }
+
+    .list-group {
+        border-radius: unset;
+        margin-bottom: 1.5rem;
+
+        &-item {
+            @extend .text-color;
+            background-color: transparent;
+            border: 0rem;
+            padding: 0.25rem 0em;
+
+            &--icon {
+                position: absolute;
+                margin-top: 0.2rem;
+                margin-left: -1.5rem;
+                font-size: small;
+                color: rgba(var(--color-text-blue-dark), 1);
+            }
+
+            .h6 {
+                color: rgba(var(--color-background-primary-light), 1);
+                font-family: FjallaOne;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .adopting {
+        padding-bottom: 6rem;
+    }
+}

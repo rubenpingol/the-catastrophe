@@ -1,18 +1,41 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <PageHeader></PageHeader>
+    <!-- END .header -->
+    <main class="main-content">
+      <HeroesAdopt></HeroesAdopt>
+      <!-- END .heroes-adopt -->
+      <MeowsHall></MeowsHall>
+      <!-- END .meows-hall -->
+      <Adopting></Adopting>
+      <!-- END .adopting -->
+      <MakeAppointment></MakeAppointment>
+      <!-- END .make-appointment -->
+
+      <PageFooter></PageFooter>
+      <!-- END .page-footer -->
+    </main>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import PageHeader from "@/components/PageHeader.vue";
+import HeroesAdopt from "@/components/HeroesAdopt.vue";
+import MeowsHall from "@/components/MeowsHall.vue";
+import Adopting from "@/components/Adopting.vue";
+import MakeAppointment from "@/components/MakeAppointment.vue";
+import PageFooter from "@/components/PageFooter.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    PageHeader,
+    HeroesAdopt,
+    MeowsHall,
+    Adopting,
+    MakeAppointment,
+    PageFooter
   }
 };
 </script>

@@ -1,0 +1,5 @@
+@mixin font-base() {
+    font-family: var(--typography-family-primary);
+    font-size: 1rem;
+    color: rgba(var(--color-text-black), 1);
+}

@@ -1,0 +1,49 @@
+.meows-hall {
+    background: rgba(var(--color-background-blue-light), 1)
+        url('../assets/bg_hallofmeows.jpg')
+        center/100% no-repeat;
+    background-position: bottom 0px;
+    background-size: contain;
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+
+    &__title {
+        color: rgba(var(--color-background-blue-dark), 1);
+    }
+    .lead {
+        color: rgba(var(--color-background-blue), 1);
+    }
+    &__gallery {
+        margin-bottom: 2rem;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .meows-hall {
+        background-position: bottom;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .meows-hall {
+        background-size: cover;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .meows-hall {
+        padding-bottom: 4.5rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .meows-hall {
+        padding-bottom: 4.5rem;
+        background-position: bottom center;
+        background-size: contain;
+    }
+}

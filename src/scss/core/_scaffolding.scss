@@ -1,0 +1,64 @@
+html, body {
+    @include font-base();
+}
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: Poppins-Bold;
+}
+.text-secondary-uppercase {
+    font-family: FjallaOne;
+    text-transform: uppercase;
+}
+.nav-item,
+.btn {
+    @extend .text-secondary-uppercase;
+}
+.btn {
+    border-radius: 0.15rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    &-primary {
+        background-color: rgba(var(--color-background-primary), 1);
+        border-color: rgba(var(--color-background-primary), 1);
+        border-bottom-color: rgba(var(--color-background-primary-dark), 1);
+        border-bottom-width: 3px;
+        // box-shadow: 0px 3px 0px rgba(var(--color-background-primary-dark), 1);
+        &:hover,
+        &:focus,
+        &:not(:disabled):not(.disabled):active,
+        &:disabled, & .disabled {
+            background-color: rgba(var(--color-background-primary), 0.8);
+            border-color: rgba(var(--color-background-primary), 0.8);
+        }
+    }
+    &-warning {
+        color: #FFFFFF;
+    }
+}
+.text {
+    &-primary {
+        color: rgba(var(--color-background-primary), 1)!important;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    h1, .h1 {
+        font-size: 2rem;
+    }
+    h2, .h2 {
+        font-size: 1.75rem;
+    }
+    h3, .h3 {
+        font-size: 1.5rem;
+    }
+    h4, .h4 {
+        font-size: 1.25rem;
+    }
+    h5, .h5 {
+        font-size: 1rem;
+    }
+    h6, .h6 {
+        font-size: 0.85rem;
+    }
+}

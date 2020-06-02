@@ -1,0 +1,54 @@
+.make-appointment {
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    background: rgba(var(--color-background-orange), 1)
+        url('../assets/bg_appointment.jpg')
+        center/100% no-repeat;
+    background-position: bottom 0px;
+    background-size: contain;
+
+    &__wrapper {
+        margin-bottom: 5rem;
+    }
+    .text-color {
+        color: rgba(249,207,162, 1);
+    }
+
+    &__title {
+        font-family: Poppins-Medium;
+        color: #FFFFFF;
+    }
+    .lead {
+        @extend .text-color;
+        & > strong {
+            font-family: Poppins-SemiBold;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .make-appointment {
+        padding-bottom: 3rem;
+        background-size: contain;
+        background-position: bottom;
+
+        &__wrapper {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .make-appointment {
+        padding-bottom: 2rem;
+        background-size: cover;
+        background-position: right 1rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .make-appointment {
+        background-size: contain;
+        background-position: bottom center;
+    }
+}

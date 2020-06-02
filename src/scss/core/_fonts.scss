@@ -1,0 +1,32 @@
+@mixin font-face($font-family, $font-weight, $font-style, $file-name) {
+    font-family: $file-name;
+    font-display: swap;
+    src: url('../fonts/#{$font-family}/#{$file-name}.ttf');
+    src: url('../fonts/#{$font-family}/#{$file-name}.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
+
+@font-face {
+    @include font-face($typography-family-secondary, normal, normal, 'FjallaOne');
+}
+
+@font-face {
+    @include font-face($typography-family-primary, normal, normal, 'Poppins');
+}
+
+@font-face {
+    @include font-face($typography-family-primary, bold, normal, 'Poppins-Bold');
+}
+
+@font-face {
+    @include font-face($typography-family-primary, bold, normal, 'Poppins-SemiBold');
+}
+
+@font-face {
+    @include font-face($typography-family-primary, bold, normal, 'Poppins-Medium');
+}
+
+@font-face {
+    @include font-face($typography-family-primary, 300, italic, 'Poppins-Light');
+}

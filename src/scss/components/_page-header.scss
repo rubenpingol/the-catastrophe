@@ -1,0 +1,52 @@
+.page-header {
+    background: rgba(var(--color-background-primary-light), 1)
+        url('../assets/bg_header1.png')
+        center/100% no-repeat;
+    background-position: bottom 0px;
+    background-size: contain;
+    padding-bottom: 10rem;
+
+    &__navbar {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__intro {
+        margin-top: 4rem;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .page-header {
+        padding-bottom: 5rem;
+        background-size: cover;
+        &__intro {
+            margin-top: 2rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .page-header {
+        padding-bottom: 5rem;
+        background-size: cover;
+        &__intro {
+            margin-top: 2rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .page-header {
+        padding-bottom: 6rem;
+        background-size: contain;
+        &__intro {
+            margin-top: 4rem;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .page-header {
+        padding-bottom: 10rem;
+    }
+}
