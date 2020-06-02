@@ -169,7 +169,7 @@ export default {
       this.isSubmitting = true;
 
       this.axios
-        .post("./api/input", qs.stringify(this.form))
+        .post("/api/input", qs.stringify(this.form))
         .then(response => {
           const result = response.data;
           this.$swal(`${result.meesages}`);
