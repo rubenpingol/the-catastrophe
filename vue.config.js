@@ -7,5 +7,12 @@ module.exports = {
         changeOrigin: true // so CORS doesn't bit us.
       }
     }
+  },
+  chainWebpack: config => {
+    config.plugin("html").tap(args => {
+      args[0].title = "The Catastrophe";
+
+      return args;
+    });
   }
 };
