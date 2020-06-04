@@ -177,7 +177,10 @@ export default {
         )
         .then(response => {
           const result = response.data;
-          this.$swal(`${result.meesages}`);
+          this.$swal({
+            icon: result.status === 1 ? "success" : "warning",
+            text: `${result.meesages}`
+          });
           return result;
         })
         .then(result => {
@@ -193,10 +196,10 @@ export default {
           this.isSubmitting = false;
         })
         .catch(e => {
-          const error = JSON.stringify(e);
-          // this.$swal(`${e}`);
-          console.log("ERROR:", error);
-          console.log("ERROR:", e.message);
+          this.$swal({
+            icon: "error",
+            text: `${e.message}`
+          });
         });
     }
   }
