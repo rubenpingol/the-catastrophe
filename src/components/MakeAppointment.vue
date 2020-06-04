@@ -198,7 +198,7 @@ export default {
         .catch(e => {
           this.$swal({
             icon: "error",
-            text: `${e.message}`
+            text: `ERROR: ${e.message}! Please try again later.`
           });
         });
     }
