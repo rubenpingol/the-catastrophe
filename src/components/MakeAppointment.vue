@@ -191,6 +191,9 @@ export default {
             };
           }
           this.isSubmitting = false;
+        })
+        .catch(e => {
+          console.log("ERROR:", e);
         });
     }
   }
