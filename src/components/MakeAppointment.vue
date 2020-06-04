@@ -165,6 +165,15 @@ export default {
     }
   },
   methods: {
+    resetFields() {
+      this.date = null;
+      this.time = null;
+      this.form = {
+        datetime: null,
+        state: null,
+        branch: null
+      };
+    },
     onSubmit: function(evt) {
       evt.preventDefault();
       this.form.datetime = this.getDateTime;
@@ -185,13 +194,7 @@ export default {
         })
         .then(result => {
           if (result.status === 1) {
-            this.date = null;
-            this.time = null;
-            this.form = {
-              datetime: null,
-              state: null,
-              branch: null
-            };
+            this.resetFields();
           }
           this.isSubmitting = false;
         })
@@ -200,6 +203,8 @@ export default {
             icon: "error",
             text: `ERROR: ${e.message}! Please try again later.`
           });
+          this.resetFields();
+          this.isSubmitting = false;
         });
     }
   }
