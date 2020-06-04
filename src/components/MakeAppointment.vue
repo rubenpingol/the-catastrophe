@@ -193,9 +193,10 @@ export default {
           this.isSubmitting = false;
         })
         .catch(e => {
-          const error = JSON.parse(e);
+          const error = JSON.stringify(e);
           // this.$swal(`${e}`);
           console.log("ERROR:", error);
+          console.log("ERROR:", e.message);
         });
     }
   }
